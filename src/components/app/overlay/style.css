@@ -1,0 +1,21 @@
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	object-fit: scale-down;
+}
+
+.ratio169 {
+	width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+}
+
+.safeView {
+	background-color: #f00;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}

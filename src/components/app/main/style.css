@@ -1,0 +1,37 @@
+.main {
+	height: 100vh;
+	background: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.pane {
+	width: 500px;
+	padding-right: 30px;
+	box-sizing: border-box;
+	height: 100vh;
+	overflow-y: scroll;
+	background: #ccc;
+	margin-left: 100px;
+}
+
+.preview {
+	width: 640px;
+	height: 360px;
+	display: flex;
+	background-color: rgba(0, 177, 64);
+}
+
+.alpha {
+	width: 640px;
+	height: 360px;
+	display: flex;
+	margin-left: 10px;
+	background: #000;
+}
+
+.alpha > div {
+	filter: brightness(0%) invert(1);
+}
