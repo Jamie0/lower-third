@@ -10,7 +10,7 @@ import path from 'path';
 const router = Router();
 
 
-let live = { items: [] };
+let live = null;
 try {
 	live = JSON.parse(fs.readFileSync(path.join(__dirname, '../../../../template.json')))
 } catch (e) { }
@@ -56,7 +56,11 @@ router.get('/', (req, res) => {
 	// fetch any data here for whatever is at / :) 
 
 	console.log('hi', req, req.path)
-	res.json(live)
+	let _live = live;
+	try {
+		_live = JSON.parse(fs.readFileSync(path.join(__dirname, '../../../../template.json')))
+	} catch (e) { console.log('oh shit!!', e) }
+	res.json(_live)
 });
 
 router.post('/transition', (req, res) => {

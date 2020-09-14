@@ -9,12 +9,16 @@
 
 .pane {
 	width: 500px;
-	padding-right: 30px;
 	box-sizing: border-box;
 	height: 100vh;
+	padding: 0px;
 	overflow-y: scroll;
 	background: #ccc;
 	margin-left: 100px;
+}
+
+.pane > * {
+	margin-left: 10px;
 }
 
 .preview {
@@ -28,10 +32,18 @@
 	width: 640px;
 	height: 360px;
 	display: flex;
-	margin-left: 10px;
 	background: #000;
 }
 
 .alpha > div {
 	filter: brightness(0%) invert(1);
+}
+
+.previews {
+	color: #fff;
+	font-family: Arial;
+}
+
+.previews .preview, .previews .alpha {
+	margin: 10px 0px 20px;
 }

@@ -1,0 +1,7 @@
+.alpha {
+	background: #000;
+}
+
+.alpha > div {
+	filter: brightness(0%) invert(1);
+}

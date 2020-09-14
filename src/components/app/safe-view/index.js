@@ -43,7 +43,7 @@ export default class SafeView extends React.Component {
 		style.overflow = 'hidden';
 
 		return (
-			<div style={{ width: '100vw', display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center' }}>
+			<div style={{ width: '100vw', display: 'flex', height: innerHeight, alignItems: 'center', justifyContent: 'center' }}>
 				<div style={style}>
 					{ this.props.children({ width: innerWidth, height: innerHeight }) }
 				</div>

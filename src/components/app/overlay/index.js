@@ -119,9 +119,10 @@ class OverlayItem extends React.Component {
 			default:
 				return null;
 			case 'text':
-				let Container = data.tag || 'span'; 
+				let Container = data.tag || 'span';
+				let tagProps = data.props || {}; 
 				return (
-					<Container style={
+					<Container {...tagProps} style={
 						Object.assign({
 							fontSize: (parseInt(data.size || 10) * height / 250) + 'px',
 						}, data.style)

@@ -469,6 +469,8 @@ export default class App extends React.Component {
 
 		let { url } = props;
 
+		url = typeof window == 'undefined' ? url : window.location.pathname;
+
 		console.log('! main render', url, this.props)
 		return (
 			<div>

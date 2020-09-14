@@ -31,6 +31,13 @@ export default class Live extends React.Component {
 
 	render () {
 		if (!this.state.data) return null;
-		return <Overlay data={ this.state.data } />;
+		return (
+			<>
+				<Overlay data={ this.state.data } />
+				<div className={ style.alpha }>
+					<Overlay data={ this.state.data } />
+				</div>
+			</>
+		);
 	}	
 }

@@ -228,12 +228,12 @@
 								"top": "0px"
 							},
 							"transition": {
-								"top": "-50%"
+								"top": "-100%"
 							}
 						},
 						"next": {
 							"style": {
-								"top": "50%"
+								"top": "100%"
 							},
 							"transition": {
 								"top": "0px"
@@ -259,6 +259,7 @@
 						"t": "text",
 						"text": "It read \"we will bring fire in 2020\"",
 						"editable": true,
+						"verticalAlign": "top",
 						"size": 10
 					}]
 				}]
@@ -323,6 +324,7 @@
 						"h": 100,
 						"t": "text",
 						"size": 9,
+						"prefix": "▪ ",
 						"text": "▪ Second 100 Days: Trump Declares War On China",
 						"editable": true
 					}, {
@@ -332,7 +334,8 @@
 						"h": 100,
 						"t": "text",
 						"size": 9,
-						"text": "▪ NATO has disbanded",
+						"prefix": "▪ ",
+						"text": "▪ NATO has disbanded!!",
 						"editable": true
 					}]
 				}]
