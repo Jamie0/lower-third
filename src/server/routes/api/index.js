@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import express from 'express';
 import bodyParser from 'body-parser';
 
 import { h } from 'preact';
@@ -7,7 +7,7 @@ import renderToString from 'preact-render-to-string';
 import fs from 'fs';
 import path from 'path';
 
-const router = Router();
+const router = express.Router();
 
 
 let live = null;
@@ -16,7 +16,7 @@ try {
 } catch (e) { }
 let clients = [];
 
-router.use(bodyParser.json());
+router.use(bodyParser.json({ limit: '5MB' }));
 
 function eventsHandler(req, res, next) {
 	if (req.internal) return next();

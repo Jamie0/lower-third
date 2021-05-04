@@ -20,7 +20,7 @@ const DEFAULT = {
 					name: 'DOG',
 					src: require('../../resources/logo.png').default,
 					align: 'top left',
-					state: 'hidden',
+					state: 'visible',
 					o: 0,
 					allStates: {
 						'visible': 'Visible',

@@ -18,6 +18,8 @@
   "devDependencies": {
     "@babel/core": "^7.11.5",
     "@babel/node": "^7.10.5",
+    "@rollup/plugin-legacy": "^2.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "babel-preset-preact": "^2.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-preact-pure": "^2.0.0",
@@ -29,6 +31,7 @@
   },
   "dependencies": {
     "@fluentui/react": "^7.134.1",
+    "express": "^4.17.1",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",

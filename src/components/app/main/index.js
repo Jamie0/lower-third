@@ -4,6 +4,14 @@ import style from './style.css';
 
 import Overlay from '../overlay';
 
+const checkForEnter = (methodToRun) => {
+	return (event) => {
+		if (event.keyCode == 13) {
+			methodToRun(event);
+		}
+	};
+};
+
 export default class Main extends React.Component {
 	state = {
 		data: {},
@@ -120,6 +128,7 @@ export default class Main extends React.Component {
 									edited: true
 								})
 							} }
+							onKeyDown={ checkForEnter(this._send) }
 							componentRef={ (r) => r && (r._onInputChange=(e, v) => r.props.onChange(e, e.target.value))}
 							value={ group.text }
 							label={ group.label || group.name || group.id } />

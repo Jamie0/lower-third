@@ -115,19 +115,26 @@ class OverlayItem extends React.Component {
 
 		let containerCSS, containerStyle;
 
+		let globalStyles = null;
+
+		if (data.cssVar) {
+			globalStyles = <style dangerouslySetInnerHTML={{__html: '.' + this.props.parentContainerId + ' { --' + data.id + ': ' + eval(data.cssEscapeMethod || 'JSON.stringify')(data.text || data.cssEscapeDefault) + '; }' }} />;
+		}
+
 		switch (data.t) {
 			default:
 				return null;
 			case 'text':
 				let Container = data.tag || 'span';
 				let tagProps = data.props || {}; 
-				return (
+				return <>
 					<Container {...tagProps} style={
 						Object.assign({
 							fontSize: (parseInt(data.size || 10) * height / 250) + 'px',
 						}, data.style)
 					}>{ data.text }</Container>
-				);
+					{ globalStyles }
+				</>;
 			case 'container':
 				containerCSS = this.getAnimationStyles();
 
@@ -210,6 +217,7 @@ class OverlayItem extends React.Component {
 				state={ state || this.props.state }
 				transition={ transition || this.props.transition }
 				key={ item.id || index }
+				parentContainerId={ 'container-' + this.id }
 				data={ item } />
 		);
 
